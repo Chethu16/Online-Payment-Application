@@ -18,9 +18,7 @@ func connectToDatabase() *connection {
 		log.Fatalln("unable to connect to database:",err.Error())
 	}
 	log.Println("database connection successfull")
-	return &connection{
-		conn,
-	}
+	return &connection{conn}
 }
 
 func (c *connection) checkDatabaseStatus() {
